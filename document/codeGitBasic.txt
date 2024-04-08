@@ -1,0 +1,36 @@
+
+
+------------------------------------------------------------------------------
+********************** Linea de Comandos de Git Básicos **********************
+------------------------------------------------------------------------------
+
+
+1 -. $ git init.                 --> Para empezar en mi carpeta un repositorio
+
+2 -. $ git add "Nombre Archivo"  --> Esto es para que el sistema sepa que esta
+                                     el archivo en el repositorio. 
+                                     (Arranca el archivo)
+
+3 -. $ git add .                 --> Otra opción para agregar archivos, cuando 
+                                     agregas el "." Le dices que agregue todo 
+                                     los archivos que hallan cambiado
+                                     en la carpeta en ese momentos estas 
+
+4 -. $ git commit -m "mensaje"   --> Este lo agrega a la base de datos 
+                                     (envía los últimos cambios, a la
+                                     DB del control de versiones)
+
+5 -. $ git status                --> Para ver como esta el estado de la DB del 
+                                     control de versiones.
+
+6 -. $ git show                  --> Te muestras todo los cambios históricos 
+                                     que se han hecho
+
+7 -. $ git log "nombre"          --> Te muestra el historial completo de 
+                                     cambios que a sufrido dicho archivo.
+
+8 -, $ git push                  --> Este comando empuja los archivos a tu 
+                                     repositorio remoto
+
+9 -. $ git pull                  --> Te los trae del remoto al local
+                                     

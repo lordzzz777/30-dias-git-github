@@ -1,0 +1,40 @@
+
+---------------------------------------------------------------------------
+********************** Linea de Comandos de terminal ********************** 
+---------------------------------------------------------------------------
+
+- 1. $ pwd -----> Este código sirve para mostrar en que carpetas estas 
+                  Con la ruta completa
+
+- 2. $ cd ------> Este comando sirve para navegar entre carpetas (cd Ruta que quieres ir, 
+                  cd .. "para regresar hacia atrás"), cuando coló un seas "~" quiere decir 
+                  que estoy en mi carpeta home, cuando tiene este símbolo "/", significa
+                  Que estoy en la raíz del disco.
+                  Si coloco cd la primera letra del archivo o carpeta y presione tabulador, 
+                  Me autocompleta el nombre de eso elementos
+ 
+- 3. $ ls ------> Esto es para listar los archivos que tengo dentro de la carpeta.
+
+                    * $ ls -al  --> que me traiga todo los archivos, incluido los ocultos
+                                    Y los coloque en una lista.
+
+                     * $ ls -l.  --> me listara todos los archivos, pero me omite los ocultos
+                   
+                     * $ ls -a   --> me mostrara el grupo de archivos pero no me lo pone
+                                     en una list
+
+- 4. $ clear ---> Para limpiar la consola, elimina todo el texto imprimido en la consola
+                  Con atajos de teclado en Mac "command l", en windows y linux "Control l"
+
+- 5. $ mkdir ---> seguido de un nombre te crea una carpeta 
+
+- 6. $ touch ---> seguido del nombre y extension, te crea un archivo vario
+
+- 7. $ cat -----> seguido del nombre del archivo, esto muestra el contenido del archivo 
+
+- 8. $ history -> Esto sirve para ver todos los comandos que he usado, si lo que quieres es invocar
+                  Alguno de los comando de la historia de comandos seria "! Numero de comando de la lista mostrada"
+
+- 9. $ rm ------> seguido del nombre del archivo, este comando elimina el archivo
+
+               

@@ -1,0 +1,57 @@
+
+Texto Utilizado de prueba en la clase de git
+--------------------------------------------
+Este es el istorial de lodzzz 
+
+Lordzzz tiene X edad y nacio en España
+
+Hoy hablamos de su historia. 
+--------------------------------------------
+
+************** Comandos usado en la clase **************
+
+$ git rm <nombreArchivo>                  -> cambia de estado
+
+$ git rm --cached <nombreArchivo>         -> esto lo borra de la memoria ram o cache 
+                                             por lo que regresa a su estado incial,
+                                             antes del  $ git add <nombreArchivo> 
+
+$ git commit -m "mensage de los cambios"  -> Manda los cambios a tu repositorio 
+
+************************* Notas ************************* 
+En el caso, de que este fuera el primer commit, y no has configurado bien tu repositorio,
+hay que decirle a git quienes somos nosotro, por lo que hay que con figurar git con nuestro
+nombre o seudonimo, e email.
+
+Para configurar git, tines que correr los sigientes comandos:
+
+$ git config                                 -> Si pulsamos enter, te mostrara todas las 
+                                                configuraciones que tiene git.
+
+$ git config --list                          -> Esto te muestra tu configuracion por defecto de tu git
+                                                esto motrara si le falta algo o no a tu configuración
+
+$ git config --list --show-origin            -> Esto te muestra donde estas las configuraciones guardadas
+                                                esto es importante en casos avanzados.
+
+$ git config --global user.name "nombre"     -> Esto cambia la configuración del usuario.
+
+$ git config --global user.email "tu@email"  -> Esto cambia la configuración del email
+
+$ git log <nombreArchivo>                    -> me Muestra la istorial de commit
+
+************************************** Info *******************************************
+|| lo que nos aparece despues de  "$ git log Historia.txt",  es algo parecido a esto ||
+||                                                                                   ||
+|| commit 2e0c61643bab5bc15078dddcaa96c90841818ce8 -> esto es el tag, la indicación  ||
+||                                                    de donde esto en este momento  ||
+|| (HEAD -> main)                                  -> indica la version y la rama    ||
+|| Author: lordzzz777                              -> Muestra el autor del commit    ||
+|| <lordzzz8@gmail.com>                            -> Muestra el email               ||
+|| Date:   Tue Apr 9 22:56:41 2024 +0200           -> fecha y Hora de creación       ||
+********************************************************************************+******        
+
+
+
+
+

@@ -1,11 +1,22 @@
+-----------------------------------------------------------------------------------
+***************** Clase 07, día 9 *************************************************
+-----------------------------------------------------------------------------------
+
+                Crea un repositorio de Git y haz tu primer commit
+                -------------------------------------------------
+
 
 Texto Utilizado de prueba en la clase de git
 --------------------------------------------
-Este es el istorial de lodzzz 
+Este es el historial de lodzzz 
 
-Lordzzz tiene X edad y nacio en España
+Lordzzz tiene X edad y nació en España
 
 Hoy hablamos de su historia. 
+
+(nueva linea agregada)
+
+Es de estatura grande
 --------------------------------------------
 
 ************** Comandos usado en la clase **************
@@ -51,6 +62,92 @@ $ git log <nombreArchivo>                    -> me Muestra la istorial de commit
 || Date:   Tue Apr 9 22:56:41 2024 +0200           -> fecha y Hora de creación       ||
 ********************************************************************************+******        
 
+
+
+------------------------------------------------------------------------------------
+****************************** Clase 08, día 10 ************************************
+------------------------------------------------------------------------------------
+
+         Analizar cambios en los archivos de tu proyecto con Git
+         -------------------------------------------------------
+
+
+Texto Utilizado de prueba en la clase de git
+--------------------------------------------
+Este es el historial de lodzzz 
+
+Lordzzz tiene X edad y nació en España
+
+Hoy hablamos de su historia. 
+
+--------------------------------------------
+
+----------------------------------------------------------------------------------------------------------------------
+| Con el comando $ git show nombreArchivo     -> te muestra los cambios que han existido sobre un archivo            |
+----------------------------------------------------------------------------------------------------------------------
+| * Cuando se ejecuta este comando te muestra el ultimo commit del archivo :                                         |
+|                                                                                                                    |
+|     -. através de su referencia "commit c0deb2da1a6ff2b239dbb4bb52dceec7319e04d6"                                  |
+|                                                                                                                    |
+| * te muestra la version (si es la mas reciente o la mas antigua) y la rama en la que esta:                         |
+|                                                                                                                    |
+|     -. se ve representado de esta manera "(HEAD -> main)"                                                          |
+|                                                                                                                    |
+| * Después de mostrar el nombre, email, fecha y hora, te muestra el titulo que se escribió en ese commit            |
+|                                                                                                                    |
+| * Mediante el "diff --git a/nombreArchivo b/nombreArchivo", coge la version anterior y la version reciente         | 
+|                                                                                                                    |
+| * lo siguiente que se muestra es un indicador o indice de la data base de git "index df906d9..2d4ae33 100644".     |
+|                                                                                                                    |
+| * a continuación te muestra cuanta versiones hay del mismo archivo:                                                |
+|                                                                                                                    |
+|       " --- a/nombreArchivo                                                                                        |
+|         +++ b/nombreArchivo                                                                                        |
+|       "                                                                                                            |
+| * aquí tiene una comparativa de cuantos bites cambiaron entre un versión y otra " @@ -1,56 +1,13 @@ "              |
+|                                                                                                                    |
+| * Cuando los cambios son muchos, es posible que la con sola te salga ":", esto te indica que hay mas datos pero    |
+|   no lo puede mostrar todo dentro de la ventana de termina, por lo que le daremos "Enter", hasta que te muestre    |
+|   todo y aparece algo como esto "(END)", pulsaremos la teclas "Shift + fn + z, z", y saldremos de nuevo a la linea |
+|   de comandos.                                                                                                     |
+----------------------------------------------------------------------------------------------------------------------
+
+
+    *** Recordemos (algunas indicaciones esta en la terminal de Mac, en Windows y linux son diferentes)***
+   
+    -. ¿Donde estoy ? -> pwd
+
+    -. ¿Que archivos tengo? -> ls
+
+    Modificamos el archivo agregando una linea mas
+    
+                  $ git add .
+                  $ git commit  --- ¿ que pasa si le doy un commit sin agregar mensaje?
+    
+          -. Te sale un editor de código basado en líneas de comandos se llama "vin", y viene derivado de "vi"
+                   
+                   * Para poder escribir dentro de "vi" hay que pulsar  la tecla "fn" + "i"
+
+                   * los textos que al principio tine el símbolo "#", no tendrá efecto.
+
+                   * si, después de escribir algo en la primera linea, damos dos enter 
+                     El editor entiende que ese es el mensaje y lo primero que escribimos 
+                     Es el titulo.
+
+                   * para salir y guardar los cambios (esto en el terminal de Mac), pulsar la tecla "esc"
+                     Y pulsar las combinaciones de teclas "Sift + fn + z, z", esto sales a la linea de terminal 
+                     normal y guarda el commit
+
+
+     -. Para compara un las diferencias entre un cambio y otro cambio, usamos el siguiente comando:
+                   
+                   * $ git diff colocaremos los indicadores de referencia (lo podemos obtener mirando la historia de los commit con "git log")
+                      
+                           git diff c0deb2da1a6ff2b239dbb4bb52dceec7319e04d6 9261f3a345e11d3686a2c860b99796bad4c78aee
+                           
+                   * la posición en el que coló que los la referencia le dice cual es el original de referencia y cual hay que comparar
+                     entendiendo que el primero es el principal de referencia    
+                              
 
 
 

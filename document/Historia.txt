@@ -146,7 +146,7 @@ Hoy hablamos de su historia.
                            git diff c0deb2da1a6ff2b239dbb4bb52dceec7319e04d6 9261f3a345e11d3686a2c860b99796bad4c78aee
                            
                    * la posición en el que coló que los la referencia le dice cual es el original de referencia y cual hay que comparar
-                     entendiendo que el primero es el principal de referencia    
+                     entendiendo que el primero es el principal de referencia
                               
 
 

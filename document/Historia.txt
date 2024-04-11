@@ -150,5 +150,30 @@ Hoy hablamos de su historia.
                               
 
 
+------------------------------------------------------------------------------------
+****************************** Clase 09, día 11 ************************************
+------------------------------------------------------------------------------------
+
+
+
+                             ¿Qué es el staging?
+                            --------------------
+
+      
+ Tengo una carpeta donde esta los archivos del proyecto, al entrar por consola y escribir "$ git init", 
+ se crea un área en memoria ram que se llama "staging", es un área completamente desconectada,
+ que funciona en memoria ram, y es donde al principio vas agregando tus cambios, y se crea el repositorio
+ Ese repositorio es la carpeta oculta que se conoce como /.git/, y hay va a estar todo los cambios al final 
+ de tu proyecto tu agrega esos cambias al área "staging" con el comando "$ git add <nombre de archivo>", 
+ puede agregas mas archivos, o puedes removerlo con el comando "$ git rm <nombre archivo>".
+ Con el comando '$ git commit -m "__"', del área "staging", lo mandas al repositorio, el repositorio,
+ tiene un nombre por defecto su nombre es "main". 
+
+ En resumen  ¿Qué es el staging? , es el estado temporal al que agregando los archivos que vamos cambiando,
+ y el repositorio real es el que llegas cuando haces un "commit" 
+ 
+ 
+
+
 
 

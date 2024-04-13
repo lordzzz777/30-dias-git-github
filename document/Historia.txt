@@ -179,6 +179,7 @@ Hoy hablamos de su historia.
 ------------------------------------------------------------------------------------
 
              ¿Qué es branch (rama) y cómo funciona un Merge en Git?
+             ------------------------------------------------------
 
 
       Rama Mastes o mein  (V1)--------(V2)--------(V3)---------------(Error)-----------(V.Final)
@@ -186,6 +187,53 @@ Hoy hablamos de su historia.
       Rama de Pruebas o Developmen    (P1)---------(P2)--------(P3)-------------(P4)---(Merge) 
                                                                         |        |
       BugFixng o hotfix    --------------------------------------------(Bug)--(Merge)
+
+------------------------------------------------------------------------------------
+****************************** Clase 11, día 13 ************************************
+------------------------------------------------------------------------------------
+
+       Volver en el tiempo en nuestro repositorio utilizando reset y checkout
+       ----------------------------------------------------------------------
+
+
+ 1 -. verificar que a ocurrido hasta ahora con un...
+
+         $ git log
+
+ 2 -. Del listado resultante copiaremos el numero de referencia que 
+      que aparece en nuestra lista de versiones, y con el comando :
+     
+         $ git reset <numero de referencia commit> 
+
+      Regresaremos al estado en el que estaba nuestro proyecto cuado 
+      realizamos ese commit.
+
+      Tememos dos tipos :
+
+         $ git reset <numero referencia commit> --hard 
+
+      esto regresaría completamente al estado en el que estaba, y
+      perdería todos los cambios nuevos que tuviéramos en versiones
+      superiores, (hay que tener cuidado con esta tipo)
+ 
+          $ git reset <numero de referencia commit> --soft 
+
+      Este también se vuelve a una versión anterior, pero lo que este 
+      en stelling, sigue en stelling.
+
+ 3 -. Par ver nuestro archivo, versiones anteriores  usaremos el comando
+
+          $ git checkout <numero referencia commit> y nombre archivo     
+    
+      Volvemos al archivo solicitado, y si realizamos un git status, veríamos 
+      que hay algo (un archivo modificado), y que si realizo un commit, eliminare 
+      todos lo nuevo que agregar, pero que si traigo en lugar de esto:
+
+          $ git checkou  <numero referencia commit> y nombre archivo 
+
+      traigo esto : $ git checkou main <nombre del archivi> se actualiza a la version mein
+      que es la ultima version que yo había realizado cambios
+
 
 
 

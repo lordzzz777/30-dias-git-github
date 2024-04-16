@@ -263,3 +263,63 @@ Hoy hablamos de su historia.
                                                                         |        |
       BugFixng o hotfix    --------------------------------------------(Bug)--(Merge)
 
+
+
+
+------------------------------------------------------------------------------------
+****************************** Clase 14, día 16 ************************************
+------------------------------------------------------------------------------------
+
+
+                          Fusión de ramas con Git merge
+                          -----------------------------
+
+
+Hemos creado dos ramas la rama main y la rama cabecera
+
+En la rama cabecera creo un nuevo commit a donde en mi documento le aremos modificaciones
+
+Nos iremos a la rama master, agregaremos mas texto y cambiar el estilo del fuente de letra
+Al fina veremos que pasa cuando los dos archivos son distintos, y tendremos que fusionarlos
+En una version final
+
+
+Nota:
+Cuando se hace un merge, no es que se cree una tercera rama, cuando se hace un merge lo que ocurre
+Es que la rama cabecera desaparece y se une ala ruta final en la rama mein.
+
+Verificamos el estado con un $ git status, para ve que estamos en la rama correcta 
+Realizaremos los cambios a nuestro archivo en dicha rama llamada cabecera
+
+Tras hacer los correspondientes cambios, aremos lo siguiente git commit -am "Mensaje descriptivo"
+
+Si hacemos un $ git checkout main, todos los avances en un principio se pierde, no...,
+solo hemos cambiado de la rama cabecera con unos cambios a la rama master que no existe esos cambios
+
+Sigamos avanzado agregando cosas a nuestra rama main y al terminar de agregar realizo un
+$ git commit -am "Mensaje descriptivo"
+
+Tomamos ala rama cabecera con un $ git checkout cabecera, vuelvo a vet todos los cambios y 
+cosas que tenían estando en esta rama, y lo que quiero es unir lo que tenia en la rama master
+con la rama cabecera.
+
+Para hacer un merge primero es irme a main con un checkout, y desde main hacer merge. (Esto lo que hace es
+Crear un comer nuevo dentro de mainn, que me va a traer el ultimo commit de mi rama main y el ultimo commit
+De la rama cabecera), y los va a fusionar, desde main "$ git merge cabecera 'mensaje descriptivo' ", si
+no sabes en que rama esta existe un comando que se llama  $ git breanch, el cual te muestra 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -312,6 +312,41 @@ no sabes en que rama esta existe un comando que se llama  $ git breanch, el cual
 
 
 
+------------------------------------------------------------------------------------
+****************************** Clase 15, día 17 ************************************
+------------------------------------------------------------------------------------
+
+
+                   Resolución de conflictos al hacer un merge.
+                   ------------------------------------------
+
+Simula un conflicto, cambiemos los mismos archivos en una rama y la otra ... cuando yo 
+realice un merge, git va a detectar un error, por ejemplo: 
+
+Vamos a main con un $ git checkout main, y después ya que estamos en la rama main 
+vamos a fusionar los cambios de la rama de cabecera, dando como resultado un conflicto
+
+En tu código aparecerá algo como esto 
+ 
+        <<<<<<<<<< HEAD (Current Change)
+
+         -------------- Indica en la rama donde estaba cuando hice el merge ------------- 
+
+        ======== 
+
+        -------------- Indica que de hay viene el merge ------------- 
+
+        >>>>>>>>>> Nombre de rama (Incoming Change) 
+
+Tiene que arreglar los conflicto eligiendo los cambios que mas me conviene según el 
+trabajo que este realizando dentro de mi proyecto
+
+Al corregir el conflicto, realizaría un git status, para verificar que el merge esta
+todavía esta incompleto, introduciremos el siguiente código $ git commit -am "conflicto solucionado"
+Y guardamos 
+
+
+
 
 
 

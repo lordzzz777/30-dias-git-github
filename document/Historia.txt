@@ -346,11 +346,15 @@ todavía esta incompleto, introduciremos el siguiente código $ git commit -am "
 Y guardamos 
 
 
+------------------------------------------------------------------------------------
+****************************** Clase 16, día 18 ************************************
+------------------------------------------------------------------------------------
 
 
-
-
-
+                 Cómo funcionan las llaves públicas y privadas
+                 ---------------------------------------------
+Llave publica y llave privada, ser crean con un proceso algorítmico, las llaves esta vinculada matemáticamente 
+una con la otra, esto quiere decir que lo que yo cifre con mi llave publica solo lo abre con mi llave privada
 
 
 

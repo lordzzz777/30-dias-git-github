@@ -357,6 +357,26 @@ Llave publica y llave privada, ser crean con un proceso algorítmico, las llaves
 una con la otra, esto quiere decir que lo que yo cifre con mi llave publica solo lo abre con mi llave privada
 
 
+------------------------------------------------------------------------------------
+****************************** Clase 17, día 19 (1º parte) *************************
+------------------------------------------------------------------------------------
+
+                            Configura tus llaves SSH en local
+                            ---------------------------------
+
+
+En el entorno local crearemos una llave privada y una llave publica, una vez esta creadas enviamos esa publica a GitHub
+al repositorio, y le decimos a GitHub para este repositorio vas a usar esta llave publica de la llave privada que esta 
+en el local, y eso se conecta a través de un nuevo protocolo "SSH", GitHub asumes te mandara cífrala con tu llave publica
+su propia llave publica  
+
+
+
+
+
+
+
+
 
 
 

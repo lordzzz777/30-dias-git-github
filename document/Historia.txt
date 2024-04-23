@@ -374,8 +374,110 @@ su propia llave publica
 ****************************** Clase 17, día 19 (2º parte) *************************
 ------------------------------------------------------------------------------------
 
+En tu entorno local vas a crear una llave privada y una llave publica, una vez las creas 
+Una vez las creas, las vas a embijar a Github, a nuestro repositorio, y le diremos a GitHub,
+Para este repositorio quiero que uses esta llave publica, de mi llave privada, y esto se 
+conecta por un protocolo nuevo que se llama "SSH", en tu primera connexion con GitHub, 
+Te enviara cifrada con tu llave publica te manda su propia llave publica, tendremos una via de doble camino por por el protocolo SSH, y ya no será necesario que te tengas que loquear 
 
-------------------------- Pendiente en linea de repaso -----------------------------
+Por ejemplo:
+Tengo en mi repositorio en GitHub un proyecto 
+
+Primero es recordar donde estamos 
+Con $ pwd  (te muestra la ruta)
+Si colocamos $ ls -al (te muestra todos los archivos y carpetas del directorio)
+Iremos a la carpeta de nuestro proyecto con cd <nombre de carpeta>
+Escribiremos $ ls, veremos los archivos de nuestro proyecto y me mostrara la vais de main
+
+
+****************************** Nota *******************************
+Las llaves SSH no son por repositorio o proyecto, si no por persona 
+-------------------------------------------------------------------
+
+Para recordar como esta configurado nuestro gut local:
+
+$ git config -l
+
+Al darle enter, me va ha mostrar , mi user.name 
+Y mi user.email
+
+Para cambiar el email:
+
+$ git config --global user.email "mi@email"
+
+Para configurar, repetiremos el comando
+
+$ git config -l
+
+Lo que sigue es crear la llave SSH 
+
+$ ssh-keygen -t rsa -b 4096 -C "mi@email.com"
+
+Pulsamos enter, nos pereira donde queremos guardar la llave, en principio el lugar 
+por defecto, por lo que solo es dar enter
+Luego te pedirás un passphrase que es una contraseña con espacios, básicamente es la 
+contraseña a adicional de texto que le vamos a poner a nuestra llave publica y privada,
+nosotros decidimos si colocarle un passphrase o no
+Por lo general es recomendable que si
+
+En Win y linux, para saver que las llaves esta corriendo o no, escribiremos 
+el siguiente comando:
+
+$ eval  $(ssh-agent -s)
+
+Si todo esta bien 
+
+Lo que no queda es agregar la llave
+
+$ ssh-add ~/.ssh/id_rsa
+
+En Mac -->
+
+Cd .ssh/
+
+Ls -al
+
+Cat id_rsa.pub (Esto ve el contenido mi llave publica)
+cat known_hosts 
+
+Tendremos que hacer la misma historia evaluar si esta corriendo el ssh
+
+Eval "$(ssh-agent -s)"
+ 
+Si el archivo config no lo tienes toca crearlo
+
+ls -a 
+
+Cd .ssh/
+
+ls -al
+
+Vim config
+
+Te abrira eel editor de texto del terminal
+
+Escribiremos lo siguiente 
+
+Host *
+       AddKeysToAgent yes
+       UseKeyschain yes
+       IdentityFile ~/.ssh/id_rsa
+
+Guardo 
+
+
+
+ls -al 
+
+cat config
+
+Cd
+
+ssh-add -K ~/.ssh/id_rsa
+ 
+Pulsamos enter
+
+Ya podríamos hacer $ git putsch y $ git pull sin necesidad de contraseñas.
 
 
 ------------------------------------------------------------------------------------

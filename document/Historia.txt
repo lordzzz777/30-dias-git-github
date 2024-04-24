@@ -497,9 +497,64 @@ de llave publica
                                 Tu primer push
                                 --------------
 
-------------------------- Pendiente en linea de repaso -----------------------------
+Para empujar los cambios desde mi repositorio local al remoto, tendremos que hacer lo 
+siguiente, copiamos la url de nuestro repositorio remoto en GitHub y en la consola
+Verificamos que estamos dentro de nuestro repositorio en nuestra carpeta
 
+$ pwd
 
+Le diremos a git, que vamos agrega un origen remoto de nuestros archivos
+
+$ git remote add origin <url que copiamos de nuestro remoto>
+
+Pulsamos enter your pareciera que no pasa nada, pero si escribimos 
+
+$ git remote y enter, vemos algo que se llama origin 
+
+$ git remote -v enter, 
+
+nos muestra un origin para hacer un fetch "traernos", y nos muestra
+Un push que significa empujar 
+
+Tenemos en nuestra carpeta 
+
+$ ls -al (mostrara el contenido de la carpeta)
+
+$ git push origin main, le estamos diciendo a git, que le envié al origen la rama main
+
+Lo que tenemos que hacer es traernos los cambios del remoto 
+
+$ git pull origin main
+
+Esta "fatal: refusing to merge unrelated histories" , por que hay dos historias distintas y se rehusa a fusionar estas dos historia, pero hay una forma de corregir 
+
+$ git pull origin main--allow-unrelated-histories
+
+Esto permite fusionar la rama remota co la rama local
+-----------------------------------------------------
+**** lo primero antes de hacer un commit es traerme la ultima version del servidor ****
+
+$ git pull
+
+Y ahora vamos a traernos los archivos del origen y lo vamos a fusionar con la rama actual
+
+$ git pull origin main
+
+Realizaremos un git Status para comprobar que no Allas cambios, si lo hubiera ...
+
+$ git diff (para mostrar mas detalles)
+
+Correcto solo queda agrgar los cambios con el commit 
+
+$ git commit -am "comentario descriptivo"
+
+En cuanto agregue el cambio realizamos otro ...
+
+$ git pull origin main
+
+Lo siguiente para mandar los cambios al remoto ...
+
+$ git puch origin main
 
 
 ------------------------------------------------------------------------------------
@@ -510,7 +565,118 @@ de llave publica
                           Git tag y versiones en Github
                           -----------------------------
 
-------------------------- Pendiente en linea de repaso -----------------------------
+Para ver la historia de nuestro proyecto ...
+
+$ git log 
+
+Ves mas o menos lo que paso, si colocamos el siguiente comando
+
+$ git log --all
+
+Esto te mostrara toda la historia completa de los commit que se ha ido realizando
+Durante todo el proyecto, y si ejecutamos este comando
+
+$ git log --al  --graph 
+
+Esto te muestra la historia de tus comités con un gráfico de las ramas en su parte izquierda
+Podremos colocar mas variantes al comando ...
+
+$ git log --al  --graph --oneline 
+
+Te mostrara el historial con las ramas, pero todo mas comprimido
+Como el comando es tan largo, podemos creas lo que son alias, de la siguiente manera
+
+alias <nombre_del alias>= "git log --al  --graph --oneline"
+
+
+Para crear un tag, tiene que copiar el has de la siguiente manera ...
+
+$ git tag -a v0.1 -m "mensaje descriptivo" 1656158 (has es de ejemplo)
+
+Para ver todos los tag
+
+$ git tag
+
+Para saber a que commit o has esta conectado un tag  ...
+
+$ git show-ref --tags 
+
+Los tag no son cambios, son referencias por lo tanto no lo veras con un git status
+
+Los tag son interesante en el remoto, por lo tatanto lo primero que hay que hacer es 
+
+$ git pull origin main 
+
+$ git push origin main --tags
+
+Y listo, estaría  a la vista en GitHub, pero que pasaría si hubiéramos mandado un tag
+que estas equivocado, bueno para borrar un tag ...
+Lo primero es ver los tag que existe 
+
+$ git tag
+
+Una vez que veamos el tag que no quieres, escribiremos el siguiente comando
+
+$ git tag -d <nombre del tag a borrar> y pulsamos enteer 
+Y ya esta borrado de mi repo local, para que los cambios se realicen también en el remoto 
+Como buena practica ...
+
+$ git pull origin main
+
+$ git push origin --tags, 
+
+en el remoto sigue existiendo, para eliminarlo ...
+
+$ git push origin :refs/tags/nombre_tag
+
+
+------------------------------------------------------------------------------------
+****************************** Clase 21, día 23  ***********************************
+------------------------------------------------------------------------------------
+
+                           Manejo de ramas en GitHub
+                           -------------------------
+
+En GitHub, normalmente veras la rama master, pero que pasa con las ramas de desarrollo
+
+Comencemos con un recordatorio de los comando mas importantes referente a las ramas 
+
+$ git checkout <nombre de la rama>  --> (es lo que te permite cambiar de rama)
+
+$ git branch  --> (me muestra todas las ramas)
+
+$ git show-branch  --> (que nos muestra las ramas que existe y cual ha sido su historia)
+
+$ git show-branch --all  --> (nos muestra algo similar pero con un poco mas de datos)
+
+$ gitk --> (lo que hace es abrirte git de una manera muy visual)
+
+Primero como buena practica, traernos los cambios primero ...
+
+$ git pull origin main
+
+Después nos moveremos a nuestra rama que donde estamos trabajando
+
+$ git checkout <nombre rama>
+
+Y luego realizamos ...
+
+$ git push origin <nombre de la rama>
+
+Para seguir crearemos un par de ramas mas, primero regresaremos nuestra rama main
+
+$ git checkout main
+
+Y crearemos una rama con ...
+
+$ git branch <nombre rama>
+
+$ git branch --> (veremos las ramas)
+
+Para mandar estas ramas al remoto aremos lo siguiente
+
+$ git push origin <nombre de rama>
+
 
 
 
